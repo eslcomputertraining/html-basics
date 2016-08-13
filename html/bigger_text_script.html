@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- //jquery is required for the animate function and selecting the div using class selector -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+// here is the updateTextInput function that recieves the input from the 
+// range slider and then animates the selected div's font size
+function updateTextInput(val) {
+          $(".mydiv").animate({fontSize: val+'px'});
+        }
+</script>
+</head>
+<body>
+<!-- under here is the range code for the range slider you can change the vaue of the min max to change the avialble font size options  -->
+<input type="range" style="width:100%;" name="rangeInput" min="0" max="1000"  onchange="updateTextInput(this.value);">
+<!-- when the slider value is changed the updateTextInput is called and current value
+is passed to the updateTextInput function -->
+
+<div class="mydiv">
+  Insert the text you want on the site here!
+</div>
+</body>
+</html>
